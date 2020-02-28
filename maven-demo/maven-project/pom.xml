@@ -9,7 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>maven_project</artifactId>
+    <artifactId>maven-project</artifactId>
 
     <packaging>war</packaging>
 

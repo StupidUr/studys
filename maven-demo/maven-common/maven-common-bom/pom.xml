@@ -6,21 +6,17 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.tjaide.study</groupId>
-    <artifactId>maven_common_bom</artifactId>
+    <artifactId>maven-common-bom</artifactId>
     <packaging>pom</packaging>
-    <version>${maven-demo.version}</version>
+    <version>1.0-SNAPSHOT</version>
     <description>maven 公共版本管理</description>
-
-    <properties>
-        <maven-demo.version>1.0-SHAPSHOT</maven-demo.version>
-    </properties>
 
     <dependencyManagement>
         <dependencies>
             <dependency>
                 <groupId>com.tjaide.study</groupId>
-                <artifactId>maven_common_core</artifactId>
-                <version>${maven-demo.version}</version>
+                <artifactId>maven-common-core</artifactId>
+                <version>${project.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
