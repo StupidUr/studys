@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.tjaide.study</groupId>
+    <artifactId>maven_common_bom</artifactId>
+    <packaging>pom</packaging>
+    <version>${maven-demo.version}</version>
+    <description>maven 公共版本管理</description>
+
+    <properties>
+        <maven-demo.version>1.0-SHAPSHOT</maven-demo.version>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>com.tjaide.study</groupId>
+                <artifactId>maven_common_core</artifactId>
+                <version>${maven-demo.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+    <distributionManagement>
+        <repository>
+            <id>aide-releases</id>
+            <name>Nexus Release Repository</name>
+            <url>http://192.168.254.13/content/repositories/releases</url>
+        </repository>
+        <snapshotRepository>
+            <id>aide-snapshots</id>
+            <name>Nexus Snapshot Repository</name>
+            <url>http://192.168.254.13/content/repositories/snapshots</url>
+        </snapshotRepository>
+    </distributionManagement>
+</project>
