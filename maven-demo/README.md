@@ -8,11 +8,11 @@ OTHERS
 
 ## [0.MAVEN简要概述](https://github.com/StupidUr/studys/tree/master/maven-demo/docs/0.MAVEN简要概述.md)
 
-## [1.MAVEN生命周期](https://github.com/StupidUr/studys/tree/master/maven-demo/maven_lifecycle)
+## [1.MAVEN生命周期](https://github.com/StupidUr/studys/tree/master/maven-demo/maven-lifecycle)
 
-## [2.POM](https://github.com/StupidUr/studys/tree/master/maven-demo/maven_pom)
+## [2.POM](https://github.com/StupidUr/studys/tree/master/maven-demo/maven-pom)
 
-## [3.MAVEN构建配置文件](https://github.com/StupidUr/studys/tree/master/maven-demo/maven_profiles)
+## [3.MAVEN构建配置文件](https://github.com/StupidUr/studys/tree/master/maven-demo/maven-profiles)
 
 ## [4.MAVEN仓库](https://github.com/StupidUr/studys/tree/master/maven-demo/docs/4.MAVEN仓库.md)
 
@@ -26,4 +26,4 @@ OTHERS
 
 ## [9.MAVEN常用命令](https://github.com/StupidUr/studys/tree/master/maven-demo/docs/9.MAVEN常用命令.md)
 
-## [MAVEN（hello，world）](https://github.com/StupidUr/studys/tree/master/maven-demo/maven_project)
+## [MAVEN（hello，world）](https://github.com/StupidUr/studys/tree/master/maven-demo/maven-project)
