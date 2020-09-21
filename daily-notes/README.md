@@ -21,17 +21,27 @@
 
  ```
 # export & unset  设置变量和取消设置变量
+# --docker 用 docker 代替 containerd
+# --kube-apiserver-arg
+# --no-deploy 不需要部署的组件 (有效选项: coredns, servicelb, traefik, local-storage, metrics-server)
+# --write-kubeconfig  将管理客户端的kubeconfig写入这个文件。 [$K3S_KUBECONFIG_OUTPUT]
+#
+export INSTALL_K3S_EXEC="--docker --kube-apiserver-arg service-node-port-range=1-65000 --write-kubeconfig ~/.kube/config --write-kubeconfig-mode 666"
+export INSTALL_K3S_EXEC="--docker --kube-apiserver-arg service-node-port-range=1-65000 --no-deploy traefik --write-kubeconfig ~/.kube/config --write-kubeconfig-mode 666"
 
 curl -sfL http://rancher-mirror.cnrancher.com/k3s/k3s-install.sh | INSTALL_K3S_MIRROR=cn sh -
 
+
+curl -sfL http://rancher-mirror.cnrancher.com/k3s/k3s-install.sh | INSTALL_K3S_MIRROR=cn sh -s - --docker
  ```
 
 
 3. 安装K3S-Agent
 
  ```
+cat /var/lib/rancher/k3s/server/node-token
+export K3S_TOKEN=K1052f7dc51da26bac4fa5e1a7245b9f82e367cfae8360767d56dc36a37e227267d::server:dece04d34ab96d693490c45f95d97ab5
 
-export K3S_TOKEN=XXXXXX
 
 export K3S_URL=https://172.26.146.55:6443
 
@@ -82,3 +92,19 @@ stream {
 
 
  ```
+
+
+* docker 停止所有容器卸载k3s
+* `/usr/local/bin/k3s-uninstall.sh上创建（或者是k3s-agent-uninstall.sh）`
+* `sudo docker  stop $(sudo docker ps -a -q)`
+* `sudo docker  rm $(sudo docker ps -a -q)`
+
+
+
+
+
+-- 问题 traefik 无法安装
+
+
+
+-- yum -y install lvm2 磁盘管理
